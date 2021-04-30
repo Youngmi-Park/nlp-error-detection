@@ -14,10 +14,10 @@ git hub: https://github.com/nawnoes/WikiExtractor
 
 위키피디아 익스트랙터와 위키피디아 한국어 덤프 파일을 동일한 디렉토리 경로에 두고, 아래 명령어를 실행시키면 위키피디아 덤프 파일이 텍스트 파일로 변환된다.
 
-
 ```shell
 $ python wikiextractor/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2
 ```
+
 - html 태그 제거
 - 본문에 아무것도 없는 경우 건너뛰기
 
