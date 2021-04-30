@@ -2,24 +2,25 @@
 
 ### 1. 위키피디아 영어 덤프 파일 다운로드
 wiki english
-덤프파일 다운 받는 곳: https://dumps.wikimedia.org/enwiki/
+link: https://dumps.wikimedia.org/enwiki/
 
 enwiki-latest-pages-articles.xml.bz2 파일 사용
 해당 파일은 xml 파일이기 때문에 텍스트 형식의 파일로 변환 필요하다.
 *일반 문서의 최신 버전만이 묶여 있고, 전체 편집 역사는 들어있지 않습니다. 대부분 이 파일을 이용하면 된다.*
 
 ### 2. 위키 덤프파일 파싱
-덤프 파일을 다운로드 받고 위키피디아 덤프 파일을 텍스트 형식으로 변환시켜주는 오픈소스인 ‘위키피디아 익스트랙터’를 사용하여 데이터 전처리를 거친다.
-https://github.com/attardi/wikiextractor
-
+덤프 파일을 다운로드 받고 위키피디아 덤프 파일을 텍스트 형식으로 변환시켜주는 오픈소스인 ‘위키피디아 익스트랙터’를 사용하여 데이터 전처리 과정을 거친다.
+git hub: https://github.com/nawnoes/WikiExtractor
 
 위키피디아 익스트랙터와 위키피디아 한국어 덤프 파일을 동일한 디렉토리 경로에 두고, 아래 명령어를 실행시키면 위키피디아 덤프 파일이 텍스트 파일로 변환된다.
-python wikiextractor/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2
 
 
-- html태그 제거 작업 
--본문에 아무것도 없는 경우 건너뛰기
-https://github.com/nawnoes/WikiExtractor
+```shell
+$ python wikiextractor/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2
+```
+- html 태그 제거
+- 본문에 아무것도 없는 경우 건너뛰기
+
 
 
 텍스트 파일로 변환된 위키피디아 덤프는 총 15개의 디렉토리로 구성
