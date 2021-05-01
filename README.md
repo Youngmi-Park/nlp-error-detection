@@ -1,14 +1,13 @@
 # nlp-error-detection
-<br>
 
 ### 1. 위키피디아 영어 덤프 파일 다운로드
 wiki english
 link: https://dumps.wikimedia.org/enwiki/
 
 enwiki-latest-pages-articles.xml.bz2 파일 사용
+
 해당 파일은 xml 파일이기 때문에 텍스트 형식의 파일로 변환 필요하다.
 *일반 문서의 최신 버전만이 묶여 있고, 전체 편집 역사는 들어있지 않습니다. 대부분 이 파일을 이용하면 된다.*
-<br>
 
 ### 2. 위키 덤프파일 파싱
 
@@ -24,10 +23,10 @@ $ python wikiextractor/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2
 - html 태그 제거
 - 본문에 아무것도 없는 경우 건너뛰기
 
-<wikipedia 구성>
-Directory: 15(AA ~ GB)
-File: wiki_00 ~ wiki_99
-Article: 67456047
+<wikipedia 구성><br>
+Directory: 15(AA ~ GB)<br>
+File: wiki_00 ~ wiki_99<br>
+Article: 67456047<br>
 
 각 디렉토리 내에 있는 wiki_00 ~ wiki_99 파일들을 편의를 위해 하나의 텍스트 파일로 통합한다.
 
@@ -36,14 +35,14 @@ $ find . -name 'wiki*' -type f -exec cat {} + > enwiki.txt
 
 ```
 
-현재 디렉토리 경로 기준으로 하위 디렉토리 포함 경로 내 모든 텍스트 파일을 출력하는 명령어
+현재 디렉토리 경로 기준으로 하위 디렉토리 포함 경로 내 모든 텍스트 파일을 출력하는 명령어<br>
 enwiki.txt 에 출력한 모든 텍스트가 저장되어 하나로 합쳐지게 된다.
 
 <br>
 
 ### 3.vocab 만들기
 
-BERT 학습을 위한 vocab을 만들기
+BERT 학습을 위한 vocab을 만들기<br>
 
 https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 
