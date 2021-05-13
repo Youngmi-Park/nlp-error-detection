@@ -34,7 +34,6 @@ Article: 67456047<br>
 
 ```shell
 $ find . -name 'wiki*' -type f -exec cat {} + > enwiki.txt
-
 ```
 
 현재 디렉토리 경로 기준으로 하위 디렉토리 포함 경로 내 모든 텍스트 파일을 출력하는 명령어<br>
