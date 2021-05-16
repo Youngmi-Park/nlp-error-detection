@@ -97,7 +97,9 @@ Levenshtein Distance (Edit Distance): 두 문자열 간의 차이를 거리로 �
 
 ![image](https://user-images.githubusercontent.com/53163222/118350804-a3ed7400-b593-11eb-9487-35ca3f9503e9.png)
 
-그 과정은 딱 3개다. 새로운걸 삽입(insertion), 기존의 원소를 삭제(deletion), 기존의 원소를 다른 것으로 대체(substitution) 예를 들어보자.
+그 과정은 딱 3개다. 새로운걸 삽입(insertion), 기존의 원소를 삭제(deletion), 기존의 원소를 다른 것으로 대체(substitution) 
+
+예를 들어
 
 ghost > toast
 
@@ -110,21 +112,14 @@ o를 a로 대체한다 (subsitution) toast = toast!
 
 그렇기 때문에, 두단어의 유사도는
 
-return (longerLength - getDistance(longer, shorter)) / (double) longerLength;
-
-이렇게 나올 것이다.
-
-그렇다면 이것을 알고리즘으로 구현하기 위해선 어떻게 해야할까?
+return (longerLength - getDistance(longer, shorter)) / (double) longerLength; 이렇게 나올 것이다.
 
 이것을 알고리즘으로 구성하기 위한 단계를 다시 한번 생각해보자.
-
-임의로 이렇게 한다고 치자.
 
 두 단어 = s1, s2
 
 길이 = s1.length, s2.length
 
-두 단어 중에 0인게 있다면, 당연한 말이겠지만, 다른 단어의 길이를 리턴한다.
 두개 배열의 For문을 같이 돈다.
 만약 s1[n] == s2[m] 이라면 변경에 필요한 거리는 0이 된다.
 그렇지 않다면, 대체, 삽입, 수정 중에서 가장 최소의 비용이 되는 방법을 고른다.
