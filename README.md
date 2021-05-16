@@ -81,10 +81,9 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 ### Spell Checker
 <p align="center">
 <img width="90%" src="https://user-images.githubusercontent.com/53163222/118373919-3aea1880-b5f4-11eb-8c83-8edaadfc5586.png"><br>
-<img width="55%" src="https://user-images.githubusercontent.com/53163222/118373923-3de50900-b5f4-11eb-9cf7-28912189a7a7.png"><br>
+<img width="50%" src="https://user-images.githubusercontent.com/53163222/118373923-3de50900-b5f4-11eb-9cf7-28912189a7a7.png"><br>
 <img width="90%" src="https://user-images.githubusercontent.com/53163222/118373925-3faecc80-b5f4-11eb-9575-2a985a9903e7.png"><br>
 <img width="90%" src="https://user-images.githubusercontent.com/53163222/118373929-42112680-b5f4-11eb-8013-4e64d12b0a60.png"><br>
-
 </p>
 
 
