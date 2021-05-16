@@ -64,16 +64,19 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 <p align="center">
 각 단어를 Masking 처리한 문장 세트<br><br>
 <img width="38%" src="https://user-images.githubusercontent.com/53163222/118373831-cca55600-b5f3-11eb-9e69-e518ec3c50d2.png">
+<br>
+<img width="30%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
 </p>
 
 학습 데이터: Book corpus, English Wikipedia<br>
 *이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*
 <p align="center">
-<img width="30%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
 <img width="40%" src="https://user-images.githubusercontent.com/53163222/118373885-0c6c3d80-b5f4-11eb-92a3-bf5a2290012d.png">
-<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373872-f8284080-b5f3-11eb-976c-c56bf6f3103b.png">
+<img width="40%"src="https://user-images.githubusercontent.com/53163222/118373872-f8284080-b5f3-11eb-976c-c56bf6f3103b.png">
 </p>
+
 ### Spell Checker
+
 <p align="center">
 <img width="90%" src="https://user-images.githubusercontent.com/53163222/118373919-3aea1880-b5f4-11eb-8c83-8edaadfc5586.png"><br>
 <img width="50%" src="https://user-images.githubusercontent.com/53163222/118373923-3de50900-b5f4-11eb-9cf7-28912189a7a7.png"><br>
