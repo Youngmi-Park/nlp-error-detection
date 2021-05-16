@@ -52,37 +52,39 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 ### 4. Masking Language Model using Bert base uncased - word prediction
 [huggingface transformers](https://pytorch.org/hub/huggingface_pytorch-transformers/)
 모델 가져오기 – 파이프라인으로 직접 사용가능
-
-![image](https://user-images.githubusercontent.com/53163222/118373803-a1bb0200-b5f3-11eb-86a6-965e1c933930.png)
-
+<p align="center">
+<img width="60%" src="https://user-images.githubusercontent.com/53163222/118373803-a1bb0200-b5f3-11eb-86a6-965e1c933930.png">
+</p>
 어떤 문장이 입력으로 들어오면 공백을 기준으로 자르고 각각의 단어를 Bert 모델에서 인식하는 [Mask] 토큰으로 바꿔서 문장 세트를 만든다. 
 
-![image](https://user-images.githubusercontent.com/53163222/118373823-c1522a80-b5f3-11eb-8ac4-efd2671a2032.png)
-
-각 단어를 Masking 처리한 문장 세트
-
-![image](https://user-images.githubusercontent.com/53163222/118373831-cca55600-b5f3-11eb-9e69-e518ec3c50d2.png)
+<p align="center">
+<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373823-c1522a80-b5f3-11eb-8ac4-efd2671a2032.png">
+</p>
+<br>
+<p align="center">
+각 단어를 Masking 처리한 문장 세트<br><br>
+<img width="38%" src="https://user-images.githubusercontent.com/53163222/118373831-cca55600-b5f3-11eb-9e69-e518ec3c50d2.png">
+</p>
 
 학습 데이터: Book corpus, English Wikipedia<br>
 *이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*
 
-![image](https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png)
-![image](https://user-images.githubusercontent.com/53163222/118373872-f8284080-b5f3-11eb-976c-c56bf6f3103b.png)
-
-![image](https://user-images.githubusercontent.com/53163222/118373885-0c6c3d80-b5f4-11eb-92a3-bf5a2290012d.png)
-
-
+<p style="display: inline" >
+<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
+<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373885-0c6c3d80-b5f4-11eb-92a3-bf5a2290012d.png">
+</p>
+<p style="display: inline">
+<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373872-f8284080-b5f3-11eb-976c-c56bf6f3103b.png">
+</p>
 
 ### Spell Checker
+<p align="center">
+<img src="https://user-images.githubusercontent.com/53163222/118373919-3aea1880-b5f4-11eb-8c83-8edaadfc5586.png"><br>
+<img width="60%" src="https://user-images.githubusercontent.com/53163222/118373923-3de50900-b5f4-11eb-9cf7-28912189a7a7.png"><br>
+<img src="https://user-images.githubusercontent.com/53163222/118373925-3faecc80-b5f4-11eb-9575-2a985a9903e7.png"><br>
+<img src="https://user-images.githubusercontent.com/53163222/118373929-42112680-b5f4-11eb-8013-4e64d12b0a60.png"><br>
 
-![image](https://user-images.githubusercontent.com/53163222/118373919-3aea1880-b5f4-11eb-8c83-8edaadfc5586.png)
-
-![image](https://user-images.githubusercontent.com/53163222/118373923-3de50900-b5f4-11eb-9cf7-28912189a7a7.png)
-
-![image](https://user-images.githubusercontent.com/53163222/118373925-3faecc80-b5f4-11eb-9575-2a985a9903e7.png)
-
-![image](https://user-images.githubusercontent.com/53163222/118373929-42112680-b5f4-11eb-8013-4e64d12b0a60.png)
-
+</p>
 
 
 ### Edit Distance (Levenshtein distance)
@@ -95,8 +97,9 @@ Levenshtein Distance (Edit Distance): 두 문자열 간의 차이를 거리로 �
 
 다른 방식도 고려해보았으나 Hamming Distance의 경우 길이가 같은 두 단어에서 몇개를 대체하면 같아지는지 계산하기 때문에 적용하기 어려울 것으로 판단해 Edit Distance로 선택
 
-![image](https://user-images.githubusercontent.com/53163222/118350804-a3ed7400-b593-11eb-9487-35ca3f9503e9.png)
-
+<p align="center">
+<img width="80%" src="https://user-images.githubusercontent.com/53163222/118350804-a3ed7400-b593-11eb-9487-35ca3f9503e9.png">
+</p>
 그 과정은 딱 3개다. 새로운걸 삽입(insertion), 기존의 원소를 삭제(deletion), 기존의 원소를 다른 것으로 대체(substitution) 
 
 예를 들어
