@@ -68,7 +68,7 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 
 학습 데이터: Book corpus, English Wikipedia<br>
 *이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*
-<div align="center" style="display: block">
+<div align="center">
 <div style="display: inline-block">
     <p  align="center">
     <img width="30%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
