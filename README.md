@@ -70,7 +70,7 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 *이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*
 <div style="display: block">
     <p style="display: inline" >
-    <img width="40%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
+    <img width="30%" src="https://user-images.githubusercontent.com/53163222/118373869-f5c5e680-b5f3-11eb-85ad-9f8e8782b405.png"><br>
     <img width="40%" src="https://user-images.githubusercontent.com/53163222/118373885-0c6c3d80-b5f4-11eb-92a3-bf5a2290012d.png">
     </p>
     <p style="display: inline">
