@@ -100,31 +100,25 @@ Levenshtein Distance (Edit Distance): 두 문자열 간의 차이를 거리로 �
 </p>
 그 과정은 딱 3개다. 새로운걸 삽입(insertion), 기존의 원소를 삭제(deletion), 기존의 원소를 다른 것으로 대체(substitution) 
 
-예를 들어
-
-ghost > toast
+예를 들어 ghost > toast
 
 g를 t로 대체한다 (subsitution) thost > toast
 h를 o로 대체한다 (subsitution) toost > toast
 o를 a로 대체한다 (subsitution) toast = toast!
 이런 과정을 거치면, ghost와 toast의 거리는 3이 되는 것이다.
 
-이제 느낌을 보면 알겠지만, 두 단어의 거리는 둘 중에 가장 긴 단어의 거리가 최대다. (zzz > effoooooooooooort를 비교한다고 생각해보자)
+두 단어의 거리는 둘 중에 가장 긴 단어의 거리가 최대다. (zzz > effoooooooooooort를 비교한다고 생각해보자)
 
 그렇기 때문에, 두단어의 유사도는
 
-return (longerLength - getDistance(longer, shorter)) / (double) longerLength; 이렇게 나올 것이다.
+(longerLength - getDistance(longer, shorter)) / (double) longerLength; 이다.
 
-이것을 알고리즘으로 구성하기 위한 단계를 다시 한번 생각해보자.
+두 단어 s1, s2를 비교할 때 두 개의 For문을 돌면서 문자열을 비교하는데, 만약 s1[n] == s2[m] 이라면 변경에 필요한 거리는 0이 된다.
+아니라면, 대체, 삽입, 수정 중에서 가장 최소의 비용이 되는 방법을 고른다. 이렇게 해서 쌓은 코스트를 배열에 저장하고 맨마지막 값을 리턴한다.
 
-두 단어 = s1, s2
-
-길이 = s1.length, s2.length
-
-두 개의 For문을 돌면서 문자열을 비교하는데, 만약 s1[n] == s2[m] 이라면 변경에 필요한 거리는 0이 된다.
-아니라면, 대체, 삽입, 수정 중에서 가장 최소의 비용이 되는 방법을 고른다.
-이렇게 해서 쌓은 코스트를 배열에 저장하고 맨마지막 값을 리턴한다.
-
+### Spell checker와 Masked LM 결합
+- Method1: Spell Checker 에서 오타가 발견되면 문장을  Masked LM에 넣고 spell checker에서 나온 옳은 단어 후보 세트를 찾아  score를 확인
+- Method2: masked language model의 결과에서 input word와 edit distance와 score를 고려하여 단어 찾기
 
 ### Edit Distance 참고자료
 
