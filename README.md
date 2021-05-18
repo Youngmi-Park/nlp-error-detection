@@ -120,6 +120,18 @@ o를 a로 대체한다 (subsitution) toast = toast!
 - Method1: Spell Checker 에서 오타가 발견되면 문장을  Masked LM에 넣고 spell checker에서 나온 옳은 단어 후보 세트를 찾아  score를 확인
 - Method2: masked language model의 결과에서 input word와 edit distance와 score를 고려하여 단어 찾기
 
+![image](https://user-images.githubusercontent.com/53163222/118665891-ad920880-b82d-11eb-9603-48889e25341f.png)
+
+이 방법은 문장에서 한 개의 단어에만 오타가 있는 경우에는 문제가 없지만, 2개 이상의 단어에 오타가 있는 경우, Masked LM에서 주변의 틀린 단어로 [MASK]에 들어갈 단어를 예측하기 때문에 잘못된 결과가 도출될 가능성이 있다.
+
+**= 우선 1개의 단어에 오타가 있는 경우만 해결하는 것 부터 진행**
+
+
+
+### 테스트 문장
+발음이 헷갈릴 법한 단어 위주로 선정
+동음이자 (Homophone, Heterograph): 동일한 발음을 가졌지만 철자가 다른 단어
+
 ### Edit Distance 참고자료
 
 https://en.wikipedia.org/wiki/Levenshtein_distance <br>
