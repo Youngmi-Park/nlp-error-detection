@@ -132,6 +132,15 @@ o를 a로 대체한다 (subsitution) toast = toast!
 발음이 헷갈릴 법한 단어 위주로 선정
 동음이자 (Homophone, Heterograph): 동일한 발음을 가졌지만 철자가 다른 단어
 
+
+### 실제 음성 인식 결과 돌려보기
+유튜브에서 가져오기    
+유튜브 음성을 텍스트로 변환하는 작업
+TED 강연이 원본 script를 제공하기 때문에 처리한 텍스트와 비교가 용이할 것으로 생각함.
+TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하고 있는 기존 자동 생성 자막 서비스를 이용해 텍스트로 변환(자막 다운로드 사이트 이용)
+
+→ 원본 스크립트, 자동생성 자막 다운(txt 파일)
+
 ### Edit Distance 참고자료
 
 https://en.wikipedia.org/wiki/Levenshtein_distance <br>
