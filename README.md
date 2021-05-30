@@ -141,6 +141,17 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 
 → 원본 스크립트, 자동생성 자막 다운(txt 파일)
 
+
+### To Do
+- sound base edit distance로 수정
+- 순위 합치기(index base, 평균)
+
+나중에 할 것
+- it's, won't와 같은 축약형태 처리
+- 학습되지 않은 단어들
+
+
+
 ### Edit Distance 참고자료
 
 https://en.wikipedia.org/wiki/Levenshtein_distance <br>
