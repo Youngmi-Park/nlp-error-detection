@@ -21,4 +21,18 @@ libri speech dataset sentence toy sample
 
 단어 한개의 오류는 잘 수정하지만 띄어쓰기나 입력 단어개수자체가 다른경우 해결이 어려운 문제가 발생
 
+
+### Libiri speech test-other 17 files
+
+**원본 Transcript** 대문자로 되어있어 소문자로 바꿈
+
+![image](https://user-images.githubusercontent.com/53163222/122710447-37a11700-d29b-11eb-8358-5781bd095a1a.png)
+
+**Deep Speech 결과**
+
+![image](https://user-images.githubusercontent.com/53163222/122710417-28ba6480-d29b-11eb-9036-a2eabbd8a740.png)
+
+
+
+
 21.06.18
