@@ -146,9 +146,10 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 - 순위 합치기(index base, 평균)
 - word prediction 규칙 세우기
 
-나중에 할 것
 - it's, won't와 같은 축약형태 처리
 - 학습되지 않은 단어들
+
+###  fasttext TEST
 
 ### Edit Distance 참고자료
 
