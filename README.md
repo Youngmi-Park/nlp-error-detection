@@ -1,6 +1,6 @@
 # nlp-error-detection
 
-오타 감지 및 수정 작업
+BERT를 활용한 오타 감지 및 수정 작업
 
 <hr>
 
@@ -102,18 +102,8 @@ Levenshtein Distance (Edit Distance): 두 문자열 간의 차이를 거리로 �
 <p align="center">
 <img width="80%" src="https://user-images.githubusercontent.com/53163222/118350804-a3ed7400-b593-11eb-9487-35ca3f9503e9.png">
 </p>
-그 과정은 딱 3개다. 새로운걸 삽입(insertion), 기존의 원소를 삭제(deletion), 기존의 원소를 다른 것으로 대체(substitution) 
 
-예를 들어 ghost > toast
-
-g를 t로 대체한다 (subsitution) thost > toast
-h를 o로 대체한다 (subsitution) toost > toast
-o를 a로 대체한다 (subsitution) toast = toast!
-이런 과정을 거치면, ghost와 toast의 거리는 3이 되는 것이다.
-
-두 단어의 거리는 둘 중에 가장 긴 단어의 거리가 최대다. (zzz > effoooooooooooort를 비교한다고 생각해보자)
-
-그렇기 때문에, 두단어의 유사도는
+두단어의 유사도는
 
 (longerLength - getDistance(longer, shorter)) / (double) longerLength; 이다.
 
@@ -138,17 +128,20 @@ o를 a로 대체한다 (subsitution) toast = toast!
 
 
 ### 실제 음성 인식 결과 돌려보기
-유튜브에서 가져오기    
-유튜브 음성을 텍스트로 변환하는 작업
+#### 1. 유튜브 자동 생성 자막
+유튜브 음성을 텍스트로 변환하는 작업(자동 자막)
 TED 강연이 원본 script를 제공하기 때문에 처리한 텍스트와 비교가 용이할 것으로 생각함.
 TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하고 있는 기존 자동 생성 자막 서비스를 이용해 텍스트로 변환(자막 다운로드 사이트 이용)
 
-→ 원본 스크립트, 자동생성 자막 다운(txt 파일)
+→ 원본 스크립트, 자동생성 자막 다운(txt 파일
+
+#### 2. Deep Speech 결과 
+Libri speech 2620개 음성으로 테스트
+
 
 ### To Do
-- sound base edit distance로 수정
+- sound base edit distance로 수정 (eudex, soudex)
 - 순위 합치기(index base, 평균)
-- word prediction 규칙 세우기
 
 - it's, won't와 같은 축약형태 처리
 - 학습되지 않은 단어들
