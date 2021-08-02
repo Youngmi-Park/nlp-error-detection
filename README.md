@@ -1,5 +1,9 @@
 # nlp-error-detection
 
+오타 감지 및 수정 작업
+
+<hr>
+
 ### 1. 위키피디아 영어 덤프 파일 다운로드
 wiki english
 link: https://dumps.wikimedia.org/enwiki/
@@ -149,7 +153,6 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 - it's, won't와 같은 축약형태 처리
 - 학습되지 않은 단어들
 
-###  fasttext TEST
 
 ### Edit Distance 참고자료
 
