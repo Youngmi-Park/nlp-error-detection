@@ -1,18 +1,17 @@
 # nlp-error-detection
 
-BERT를 활용한 오타 감지 및 수정 작업
+BERT를 활용한 오타 감지 및 수정 작업<br>
+음성인식 결과를 단순 NLP로 보고 처리해보자!
 
 <hr>
 
 ### 1. 위키피디아 영어 덤프 파일 다운로드
-wiki english
-link: https://dumps.wikimedia.org/enwiki/
+[wiki english](https://dumps.wikimedia.org/enwiki/)
 
-enwiki-latest-pages-articles.xml.bz2 파일 사용
+enwiki-latest-pages-articles.xml.bz2 사용
 
 해당 파일은 xml 파일이기 때문에 텍스트 형식의 파일로 변환 필요하다.
-*일반 문서의 최신 버전만이 묶여 있고, 전체 편집 역사는 들어있지 않다. 대부분 이 파일을 이용하면 된다.*
-
+<small>*일반 문서의 최신 버전만이 묶여 있고, 전체 편집 역사는 들어있지 않다. 대부분 이 파일을 이용하면 된다.*</small>
 <br>
 
 ### 2. 위키 덤프파일 파싱
@@ -57,14 +56,9 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 [huggingface transformers](https://pytorch.org/hub/huggingface_pytorch-transformers/)
 모델 가져오기 – 파이프라인으로 직접 사용가능
 <p align="center">
-<img width="60%" src="https://user-images.githubusercontent.com/53163222/118373803-a1bb0200-b5f3-11eb-86a6-965e1c933930.png">
+<img width="55%" src="https://user-images.githubusercontent.com/53163222/118373803-a1bb0200-b5f3-11eb-86a6-965e1c933930.png">
 </p>
 어떤 문장이 입력으로 들어오면 공백을 기준으로 자르고 각각의 단어를 Bert 모델에서 인식하는 [Mask] 토큰으로 바꿔서 문장 세트를 만든다. 
-
-<p align="center">
-<img width="40%" src="https://user-images.githubusercontent.com/53163222/118373823-c1522a80-b5f3-11eb-8ac4-efd2671a2032.png">
-</p>
-<br>
 <p align="center">
 각 단어를 Masking 처리한 문장 세트<br><br>
 <img width="38%" src="https://user-images.githubusercontent.com/53163222/118373831-cca55600-b5f3-11eb-9e69-e518ec3c50d2.png">
@@ -73,10 +67,9 @@ https://blog.nerdfactory.ai/2019/04/25/learn-bert-with-colab.html
 </p>
 
 학습 데이터: Book corpus, English Wikipedia<br>
-*이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*
+<small>*이 모델에 사용된 학습 데이터가 상당히 중립적이라 할 수 있더라도 편향된 예측을 가질 수 있다*</small>
 <p align="center">
 <img width="40%" src="https://user-images.githubusercontent.com/53163222/118373885-0c6c3d80-b5f4-11eb-92a3-bf5a2290012d.png">
-<img width="40%"src="https://user-images.githubusercontent.com/53163222/118373872-f8284080-b5f3-11eb-976c-c56bf6f3103b.png">
 </p>
 
 ### Spell Checker
@@ -121,7 +114,6 @@ Levenshtein Distance (Edit Distance): 두 문자열 간의 차이를 거리로 �
 **= 우선 1개의 단어에 오타가 있는 경우만 해결하는 것 부터 진행**
 
 
-
 ### 테스트 문장
 발음이 헷갈릴 법한 단어 위주로 선정
 동음이자 (Homophone, Heterograph): 동일한 발음을 가졌지만 철자가 다른 단어
@@ -136,13 +128,30 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 → 원본 스크립트, 자동생성 자막 다운(txt 파일
 
 #### 2. Deep Speech 결과 
-Libri speech 2620개 음성으로 테스트
+[Libri speech](https://www.openslr.org/12) 2620개 음성으로 테스트(test-clean)
+
+
+<hr>
+
+## 수정 사항
+
+### 1. Deep Speech 결과로 먼저 테스트 진행
+### 2. edit distance에서 sound base edit distance로 변경
+- eudex와 soudex 중에서 eudex를 선택
+<p>
+ eudex가 좀더 구체적인 형태로 출력된다.
+  <img width="50%" src="https://user-images.githubusercontent.com/53163222/128687041-0fb830c3-9082-4a5c-930f-78a66f48d565.png">
+ </p>
+
+- score 순위와 eudex 순위 merge
+- index base, 평균으로 1차 merge
+
+추후 가중치를 주어 세부 조정할 
+
+
 
 
 ### To Do
-- sound base edit distance로 수정 (eudex, soudex)
-- 순위 합치기(index base, 평균)
-
 - it's, won't와 같은 축약형태 처리
 - 학습되지 않은 단어들
 
