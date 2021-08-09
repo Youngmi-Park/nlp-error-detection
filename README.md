@@ -32,7 +32,7 @@ $ python wikiextractor/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2
 Directory: 15(AA ~ GB)<br>
 File: wiki_00 ~ wiki_99<br>
 Article: 67456047<br>
-
+in
 각 디렉토리 내에 있는 wiki_00 ~ wiki_99 파일들을 편의를 위해 하나의 텍스트 파일로 통합한다.
 
 ```shell
@@ -137,18 +137,23 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 
 ### 1. Deep Speech 결과로 먼저 테스트 진행
 ### 2. edit distance에서 sound base edit distance로 변경
-- eudex와 soudex 중에서 eudex를 선택
+- eudex와 soudex 중에서 eudex 선택
 <p>
- eudex가 soudnex보다 구체적인 비교가 가능하다.<br>
+굳이 같은 항목을 비교하는데 여러 method를 사용하지말고 한 가지만 선택하여 비교해도 될 것으로 판단하였고,  eudex가 soudnex보다 구체적인 비교가 가능하기 때문에 eudex를 선택함.<br>
+ sound distance는 eudex와 soundex 인코딩 결과를 이진수로 변환하고 각자리를 비교했을 때 다르면 1 같으면 0으로 계산
   <img width="50%" src="https://user-images.githubusercontent.com/53163222/128687041-0fb830c3-9082-4a5c-930f-78a66f48d565.png">
  <img width="50%" src="https://user-images.githubusercontent.com/53163222/128687405-b71aa6fc-b4a9-474a-b9a7-62bafe68bf6a.png">
  </p>
-
+ 
 - score 순위와 eudex 순위 merge
-- index base, 평균으로 1차 merge
+  - index base, 평균으로 1차 merge
+  - 추후 가중치를 주어 세부 조정하여 성능을 개선할 예정
 
-추후 가중치를 주어 세부 조정할 
+### 3. 테스트 문장 선택
+테스트하는데 vocab자체에 없는 단어라면 masked language model이 찾지못한다는 문제가 있고 wer측정에 오차가 있을 가능성이 있다..
+테스트할 문장을 거르기위해서 테스트 문장의 단어들이 vocab에 있는 단어인지 아닌지 찾는 작업을 진행한다.
 
+### 4. 사전에 없는 단어 처리
 
 
 
