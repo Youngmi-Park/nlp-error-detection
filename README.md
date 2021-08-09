@@ -139,8 +139,9 @@ TED 강연 영상 중 하나를 임의로 선택해서 유튜브에서 제공하
 ### 2. edit distance에서 sound base edit distance로 변경
 - eudex와 soudex 중에서 eudex를 선택
 <p>
- eudex가 좀더 구체적인 형태로 출력된다.
+ eudex가 soudnex보다 구체적인 비교가 가능하다.<br>
   <img width="50%" src="https://user-images.githubusercontent.com/53163222/128687041-0fb830c3-9082-4a5c-930f-78a66f48d565.png">
+ <img width="50%" src="https://user-images.githubusercontent.com/53163222/128687405-b71aa6fc-b4a9-474a-b9a7-62bafe68bf6a.png">
  </p>
 
 - score 순위와 eudex 순위 merge
